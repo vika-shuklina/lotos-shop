@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* НОВЫЙ ЦВЕТ ФОНА (Кремовый) */
+  background-color: #fdfcf5; 
+  color: #333333;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.full-width-block {
+  margin: 0 -50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* === АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ === */
+@media (max-width: 768px) {
+  h1 { font-size: 30px !important; letter-spacing: 1px !important; }
+  h2 { font-size: 24px !important; }
+  p, input, textarea, button { font-size: 15px !important; }
+
+  .full-width-block {
+    margin: 0 -15px !important; 
+    padding: 40px 15px !important;
   }
 }
